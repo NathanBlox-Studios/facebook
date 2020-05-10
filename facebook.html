@@ -7,9 +7,9 @@
     <title>Facebook-sign up</title>
     <style>
         header{
-            width: 1290px;
+            width: 1330px;
             background-color: rgb(0, 0, 175);
-            padding: 0px;
+            padding: 10px;
             height: 83px;
             opacity: 0.7;
         }
@@ -19,10 +19,10 @@
             width: 1000px;
             color: rgb(225, 225, 225);
             text-decoration: none;
-            display: inline-block;
             padding-top: 25px;
             padding-left: 200px;
         }
+
         #care{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: black;
@@ -38,39 +38,78 @@
             font-size: 50px;
             padding-right: 50px;
         }
-        #left{
-            float: left;
-        }
-        img{
-            padding: 20px;
+        .main{
+            display: flex;
+            justify-content: space-between;
+
         }
         body{
-            color: rgb(245, 255, 255)
-        }
-        #right{
-            float: right;
-        }        
+            background-color: darkgray;
+        }    
         #inline_0uf{
             display: inline-block;
         }
-        input{
+        input.in{
             height: 10px;
             padding: 15px;
             border-radius: 5px;
             text-decoration: none;
         }
+        #table{
+            line-height: 1.34;
+            display: inline-block;
+            height: inherit;
+        }
+        th{
+            color: white;
+        }
+        button{
+            background-color: green;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .texts{
+            color: black;
+            font-size: 16px;
+        }
+        Footer{
+            background-color: white;
+            padding-top: 10px;
+            color: black;
+            text-align: center;
+            border-width: 1330px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-<div class="main">
     <header>
         <div class="hd">
             <b>
-            <a class="logo" href="#">
+            <span class="logo" href="#">
                 facebook
-            </a></b>
+            </span></b>
         </div>
+        <table class="table">
+            <tr>
+                <th>Email or phone</th>
+                <th>Password</th>
+                <th>   </th>
+            </tr>
+            <tr>
+                <td><input name= 'email'/></td>
+                <td><input name = 'password'/></td>
+                <td><button type="submit">Log in</button></td>
+            </tr>
+            <tr>
+                <td>  </td>
+                <td><a href="#">Forgot password?</a></td>
+            </tr>
+        </table>
     </header>
+<div class="main">
     <div id="left">
         <b>
         <div id="care">Facebook helps you connect and share with the people in your life</div></b>
@@ -81,12 +120,12 @@
         <div class="create">Create an Account</div>
         <div style="color: black">It's quick and easy</div></b>
         <div id="inline_0uf">
-            <input name="name" placeholder="First Name"/>        <input name="surname" placeholder="Last Name"/>
+            <input class="in" name="name" placeholder="First Name"/>        <input class="in" name="surname" placeholder="Last Name"/>
         </div>
         <p>
-        <input name="emailorphone" placeholder="Email or Phone Number" style="width: 77%"/></p>
+        <input class="in" name="emailorphone" placeholder="Email or Phone Number" style="width: 77%"/></p>
         <p>
-            <input name="emailorphone" placeholder="Email or Phone Number" style="width: 77%"/></p>
+            <input class="in" name="emailorphone" placeholder="Email or Phone Number" style="width: 77%"/></p>
         <p><div style="color: black">Birthday</div></p>
         <div><select aria-label="Day" name="birthday_day" title="Day">
         <option value="0">Day</option>
@@ -135,8 +174,18 @@
         <option value="1906">1906</option><option value="1905">1905</option></select></div>
         <p></p><div style="color: black">Gender</div></p>
         <p><input type="radio" name="gender" value="Male"><span style="color: black">Male </span><input type="radio" name="gender" value="female"><span style="color: black">Female </span><input type="radio" name="gender" value="custom"><span style="color: black">Custom</span></p>
-        <p><input type="submit" style="background-color: green; color: white; width: 100px; height: 50px;" />Sign Up</p>
-    </div> 
-</div>   
+        <div class="texts"><p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and<p><a href="#">Cookie Policy</a>. You may receive SMS notifications from us and<p>can opt out at any time.</p></div>
+        <p><button type="submit" style="background-color: green; color: white; width: 250px; height: 50px;">Sign Up</button></p>
+        <div class="texts"><a href="#">Create a page</a> for a celebrity band or business</div>
+    </div>
+</div>
+<p>
+<Footer>
+    <div class="footer"><a href="#">English(UK)</a> <a href="#"></a> <a href="#">Portuguese(Brazil)</a> <a href="#">French(France)</a> <a href="#">Spanish</a> <a href="#">Arabic</a> <a href="#">Italian</a> <a href="#">Japanese</a> <a href="#">German</a> <a href="#">Indonesian</a> <a href="#">Hindi</a> <button title="new">+</button></div>
+    <br>
+    <div class="footer"><a href="#">Sign up</a> <a href="#">Login</a> <a href="#">Messanger</a> <a href="#">Facebook Lite</a> <a href="#">Watch</a> <a href="#">People</a> <a href="#">Pages</a> <a href="#">Page Categories</a> <a href="#">Places</a> <a href="#">Games</a> <a href="#">Locations</a> <a href="#">Marketplace</a> <a href="#">Groups</a> <a href="#">Portal</a> </div>
+    <div class="footer"><a href="#">Instagram</a> <a href="#">Local</a> <a href="#">Fundraisers</a> <a href="#">Services</a> <a href="#">About</a> <a href="#">Create Ad</a> <a href="#">Create Page</a> <a href="#">Developers</a> <a href="#">Career</a> <a href="#">Privacy</a> <a href="#">Cookies</a> <a href="#">Ad Choices</a> <a href="#">Terms</a> <a href="#">Help</a> </div>
+</Footer>
+</p>
 </body>
 </html>
